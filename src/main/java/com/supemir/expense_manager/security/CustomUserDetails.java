@@ -12,8 +12,7 @@ public class CustomUserDetails implements UserDetails {
     private final UserEntity userEntity;
     private final Collection<? extends GrantedAuthority> authorities;
 
-    public CustomUserDetails(UserEntity userEntity,
-                             Collection<? extends GrantedAuthority> authorities) {
+    public CustomUserDetails(UserEntity userEntity, Collection<? extends GrantedAuthority> authorities) {
         this.userEntity = userEntity;
         this.authorities = authorities;
     }
