@@ -30,13 +30,6 @@ public class UserEntity {
     @Column(unique = true, nullable = true)
     private String email;
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<PlannedTransactionEntity> plannedTransactions;
-
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<TransactionEntity> transactions;
-
-
     @Override
     public final boolean equals(Object o) {
         if (this == o) return true;
